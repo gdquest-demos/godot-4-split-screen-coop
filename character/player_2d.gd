@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var gravity := 4500.0
 @export var jump_strengths := [1400.0, 1000.0]
 
-@export var controls: Resource = null
+@export var controls: PlayerControls = null
 
 var _jump_number := 0
 
@@ -12,7 +12,9 @@ var _jump_number := 0
 
 
 func _ready() -> void:
-	if not controls:
+	# Disable the player if we don't assign a `PlayerControls` resource to
+	# the `controls` variable to prevent a crash.
+	if controls == null:
 		set_physics_process(false)
 
 

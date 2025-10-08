@@ -40,7 +40,7 @@ unique_name_in_owner = true
 unique_name_in_owner = true
 
 [node name="ColorRect" type="ColorRect" parent="HBoxContainer"]
-custom_minimum_size = Vector2(10, 10)
+custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 color = Color(0.3019608, 0.6509804, 1, 1)
 

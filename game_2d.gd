@@ -19,10 +19,12 @@ extends Control
 
 
 func _ready() -> void:
-	# The world_2d object of the viewport contains information about what to
-	# render. Here, it's our game level. We need to pass it from the first to
-	# the second viewport for both of them to render the same level.
+	# The `world_2d` object of the Viewport class contains information about
+	# what to render. Here, it's our game level. We need to pass it
+	# from the first to the second SubViewport for both of them to render
+	# the same level.
 	players[1].sub_viewport.world_2d = players[0].sub_viewport.world_2d
+
 	# For each player, we create a remote transform that pushes the character's
 	# position to the corresponding camera.
 	for info in players:
